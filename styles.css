@@ -44,6 +44,10 @@ img {
   margin: 0 auto;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* ===== Header (mobile first) ===== */
 
 .site-header {
