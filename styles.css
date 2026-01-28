@@ -1,0 +1,579 @@
+/* ===== Mobile-first Rustic + Professional ===== */
+:root {
+  --bg: #f6f1e7;
+  --panel: #fff9f0;
+  --text: #1f1f1f;
+  --muted: #5a544e;
+  --border: #e6d8c7;
+
+  --wood: #6b4f3a;
+  --gold: #c8892b;
+  --hop: #3e7c59;
+  --brick: #b34a3c;
+
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --radius: 14px;
+  --max: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(var(--max), 92%);
+  margin: 0 auto;
+}
+
+/* ===== Header (mobile first) ===== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.site-header {
+  top: 0;
+  background: rgba(246, 241, 231, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column; /* mobile first: stacked */
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 900;
+  letter-spacing: 0.2px;
+}
+.logo {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+.brand-name {
+  font-size: 1.05rem;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap; /* mobile: wraps nicely */
+  gap: 8px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 800;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #efe5d6;
+  border: 1px solid #e7d6c2;
+}
+
+.nav a:hover {
+  filter: brightness(0.98);
+}
+
+/* ===== Hero (mobile first) ===== */
+.hero {
+  position: relative;
+  min-height: 40vh;
+  max-height: 140vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+  background-color: #e7d6c2;
+}
+
+.hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.15) 45%,
+    rgba(246, 241, 231, 0.82) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  padding: 46px 0 32px;
+}
+
+.hero h1 {
+  margin: 0 0 10px;
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+.hero p {
+  margin: 0 auto 18px;
+  max-width: 42ch;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 650;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 900;
+  border: 2px solid transparent;
+  background: var(--gold);
+  color: #1a120a;
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+}
+.btn:hover {
+  filter: brightness(0.98);
+}
+
+.btn-outline {
+  background: rgba(255, 249, 240, 0.12);
+  border-color: rgba(255, 255, 255, 0.65);
+  color: #fff;
+}
+
+/* ===== Shades of Bluegrass Event button ===== */
+
+.event-BGsite {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.5rem 0.9rem;
+
+  background-color: #fcb900;
+  color: #0063b6;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.event-BGsite:hover {
+  background-color: #fcb900;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.event-BGsite:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== EZ Pizza Event button ===== */
+
+.event-PZsite {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.5rem 0.9rem;
+
+  background-color: #00a859;
+  color: #dd3333;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.event-PZsite:hover {
+  background-color: #fcb900;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.event-PZsite:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Sections (mobile first) ===== */
+.section {
+  padding: 44px 0;
+}
+
+.section-alt {
+  background: #efe5d6;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+h2 {
+  font-size: 1.7rem;
+  margin: 0 0 10px;
+}
+.muted {
+  color: var(--muted);
+}
+
+/* Mobile first: single column */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* ===== About section photos ===== */
+/* ===== About section photos ===== */
+.about-photos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 22px;
+  width: 100%;
+  align-items: start;
+}
+
+/* Keep each photo “card” consistent */
+.about-photos figure {
+  margin: 0;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.about-photos img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.about-photos figcaption {
+  padding: 6px 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: center;
+  background: #efe5d6;
+}
+
+/* Stack photos on very small screens */
+@media (max-width: 420px) {
+  .about-photos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Cards ===== */
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #ead7c2;
+  position: relative;
+}
+
+.card h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 84px;
+  height: 3px;
+  background: var(--hop);
+}
+
+/* ===== Menu (mobile first) ===== */
+
+/* ===== Beer and section background image ===== */
+#BeerBackgroundIMG {
+  position: relative;
+  background-image: url("images/OnTapPic.png.JPEG"); /* change filename */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* soft overlay so text stays readable */
+#BeerBackgroundIMG::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(246, 241, 231, 0.2); /* rustic light overlay */
+}
+
+/* keep menu content above the overlay */
+#BeerBackgroundIMG .container {
+  position: relative;
+  text-align: right;
+  color: #fff;
+  margin-bottom: 100px;
+}
+
+#BeerBackgroundIMG {
+  box-shadow:
+    inset 0 0 0 2px var(--border),
+    inset 0 0 0 6px #6b4f3a55;
+}
+
+#SeltzerBackgroundIMG {
+  position: relative;
+  background-image: url("images/SeltzerBg.JPG"); /* change filename */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#BeerBackgroundIMG {
+  position: relative;
+  background-image: url("images/OnTapPic.png.JPEG"); /* change filename */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* soft overlay so text stays readable */
+#SeltzerBackgroundIMG::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(246, 241, 231, 0.2); /* rustic light overlay */
+}
+
+/* keep menu content above the overlay */
+
+#SeltzerBackgroundIMG .container {
+  position: relative;
+  text-align: left;
+  color: #fff;
+  margin-bottom: 100px;
+}
+
+#SeltzerBackgroundIMG {
+  box-shadow:
+    inset 0 0 0 2px var(--border),
+    inset 0 0 0 6px #6b4f3a55;
+}
+
+.featured-beer {
+  background: linear-gradient(180deg, #fffaf2, #f4ecdf);
+}
+
+.featured-name {
+  font-size: 1.4rem;
+  font-weight: 900;
+  margin: 10px 0 2px;
+}
+
+.featured-style {
+  font-weight: 700;
+  color: var(--wood);
+}
+
+.featured-abv {
+  font-weight: 800;
+  margin-top: 6px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* mobile first: stacked */
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.menu-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu-list li {
+  display: block; /* mobile: easier to read */
+  padding: 10px 0;
+  border-bottom: 1px dashed #d8c7b2;
+}
+
+.menu-list li:last-child {
+  border-bottom: 0;
+}
+
+.notice {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+.notice strong {
+  color: var(--wood);
+}
+
+/* ===== Footer ===== */
+.hours-title {
+  font-weight: 800;
+  margin: 14px 0 8px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #000;
+  display: inline-block;
+}
+
+footer {
+  padding: 22px 0;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 800;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fff;
+  width: fit-content;
+  margin-top: 10px;
+}
+
+.social-link svg {
+  flex: 0 0 auto;
+}
+
+.social-link:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* Facebook + Instagram colors */
+.social-link.fb {
+  color: #1877f2;
+}
+
+.social-link.ig {
+  color: #c13584;
+}
+
+/* =========================================================
+   Desktop / larger screens
+   Keeps it looking like your original desktop layout
+   ========================================================= */
+@media (min-width: 860px) {
+  .header-inner {
+    flex-direction: row; /* desktop: side-by-side */
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 0;
+  }
+
+  .nav a {
+    background: transparent;
+    border: none;
+  }
+
+  .nav a:hover {
+    background: #efe5d6;
+  }
+
+  .hero {
+    min-height: 58vh;
+  }
+
+  .hero h1 {
+    font-size: 3.1rem; /* desktop big headline */
+  }
+
+  .hero-buttons {
+    flex-direction: row; /* desktop: buttons in a row */
+    justify-content: center;
+  }
+
+  .btn {
+    width: auto; /* desktop: natural size */
+    max-width: none;
+  }
+
+  .two-col {
+    grid-template-columns: 1.4fr 0.9fr; /* desktop two-column */
+    gap: 18px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr 1fr; /* desktop 2 columns */
+  }
+
+  .menu-list li {
+    display: flex; /* desktop: neat single-line look */
+    gap: 12px;
+  }
+}
