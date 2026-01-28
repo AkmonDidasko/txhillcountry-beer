@@ -46,10 +46,6 @@ img {
 
 /* ===== Header (mobile first) ===== */
 
-html {
-  scroll-behavior: smooth;
-}
-
 .site-header {
   top: 0;
   background: rgba(246, 241, 231, 0.92);
